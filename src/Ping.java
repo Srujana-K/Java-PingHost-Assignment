@@ -30,9 +30,9 @@ public class Ping {
         Collections.sort(times);
         if(times.size()>0){
             if(times.size()%2!=0)
-                return times.get((times.size()/2)+1);
+                return times.get((times.size()+1)/2-1);
             else
-                return times.get((times.size()+1)/2);
+                return (times.get(times.size()/2-1)+times.get(times.size()/2))/2;
         }
         return (float) 0.00;
     }
